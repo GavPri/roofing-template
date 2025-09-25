@@ -15,6 +15,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Logo } from "../ui/logo";
+import Link from "next/link";
 
 const ITEMS = [
   {
@@ -85,9 +86,9 @@ const Navbar6 = () => {
       <div className="fixed top-0 left-0 right-0 z-50 h-[125px] lg:h-36 bg-transparent backdrop-blur-md">
         <section className="fixed top-5 left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border-primary bg-background/70 backdrop-blur-md lg:top-12">
           <div className="flex items-center justify-between px-6 py-3">
-            <a href="/" className="flex shrink-0 items-center gap-2">
+            <Link href="/" className="flex shrink-0 items-center gap-2">
               <Logo size="xl" />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <NavigationMenu className="max-lg:hidden">
@@ -103,7 +104,7 @@ const Navbar6 = () => {
                           {link.dropdownItems.map((item) => (
                             <li key={item.title}>
                               <NavigationMenuLink asChild>
-                                <a
+                                <Link
                                   href={item.href}
                                   className="group flex gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 >
@@ -115,7 +116,7 @@ const Navbar6 = () => {
                                       {item.description}
                                     </p>
                                   </div>
-                                </a>
+                                </Link>
                               </NavigationMenuLink>
                             </li>
                           ))}
@@ -124,14 +125,14 @@ const Navbar6 = () => {
                     </NavigationMenuItem>
                   ) : (
                     <NavigationMenuItem key={link.label} className="">
-                      <a
+                      <Link
                         href={link.href}
                         className={cn(
                           "relative bg-transparent px-1.5 text-sm font-medium text-primary"
                         )}
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </NavigationMenuItem>
                   )
                 )}
@@ -140,11 +141,11 @@ const Navbar6 = () => {
 
             {/* Auth Buttons */}
             <div className="flex items-center gap-2.5">
-              <a href="/login" className="max-lg:hidden">
+              <Link href="/login" className="max-lg:hidden">
                 <Button variant="default">
                   <span className="relative z-10">Call Us</span>
                 </Button>
-              </a>
+              </Link>
 
               {/* Hamburger Menu Button (Mobile Only) */}
               <button
@@ -215,7 +216,7 @@ const Navbar6 = () => {
                     >
                       <div className="space-y-3 rounded-lg bg-muted/50 p-4">
                         {link.dropdownItems.map((item) => (
-                          <a
+                          <Link
                             key={item.title}
                             href={item.href}
                             className="group block rounded-md p-2 transition-colors hover:bg-accent"
@@ -233,13 +234,13 @@ const Navbar6 = () => {
                                 {item.description}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     className={cn(
@@ -248,7 +249,7 @@ const Navbar6 = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )
               )}
             </nav>

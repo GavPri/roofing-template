@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Home, Phone, Mail, MessageSquare, Shield, Award } from "lucide-react";
+import {  Phone, Mail, MessageSquare,  } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -17,17 +17,9 @@ const roofingFormSchema = z.object({
 
 type RoofingFormData = z.infer<typeof roofingFormSchema>;
 
-interface RoofingContactFormProps {
-  heading?: string;
-  subheading?: string;
-  description?: string;
-}
 
-const RoofingContactForm = ({
-  heading = "Expert Roofing",
-  subheading = " Solutions You Can Trust",
-  description = "From repairs to complete installations, our certified roofing professionals deliver quality craftsmanship with materials built to last. Get your free estimate today.",
-}: RoofingContactFormProps) => {
+
+const RoofingContactForm = () => {
   const {
     register,
     handleSubmit,

@@ -10,6 +10,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ServiceHeroProps {
   badge: {
@@ -78,7 +79,7 @@ const ServiceHero = ({
               <CarouselContent className="max-h-[350px]">
                 {images.map((image, index) => (
                   <CarouselItem key={index} className="max-w-96">
-                    <img
+                    <Image
                       src={image}
                       alt={`${altText} ${index + 1}`}
                     />
@@ -101,7 +102,7 @@ const ServiceHero = ({
               <CarouselContent className="max-h-[350px]">
                 {images.map((image, index) => (
                   <CarouselItem key={index} className="max-w-96">
-                    <img
+                    <Image
                       src={image}
                       alt={`${altText} ${index + 1}`}
                     />
@@ -125,7 +126,7 @@ const ServiceHero = ({
               <CarouselContent className="max-h-[600px]">
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
-                    <img
+                    <Image
                       src={image}
                       alt={`${altText} ${index + 1}`}
                     />
@@ -148,7 +149,7 @@ const ServiceHero = ({
               <CarouselContent className="max-h-[600px]">
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
-                    <img
+                    <Image
                       src={image}
                       alt={`${altText} ${index + 1}`}
                     />

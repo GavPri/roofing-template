@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 interface LogoProps {
   className?: string;
@@ -16,7 +18,7 @@ const sizeClasses = {
 
 export function Logo({ className, size = "md", href }: LogoProps) {
   const LogoContent = () => (
-    <img
+    <Image
       src="/roofing-template.svg"
       alt="Roofing Company Logo"
       className={cn(sizeClasses[size])}
@@ -25,7 +27,7 @@ export function Logo({ className, size = "md", href }: LogoProps) {
 
   if (href) {
     return (
-      <a
+      <Link
         href={href}
         className={cn(
           "inline-flex items-center transition-opacity hover:opacity-80",
@@ -33,7 +35,7 @@ export function Logo({ className, size = "md", href }: LogoProps) {
         )}
       >
         <LogoContent />
-      </a>
+      </Link>
     );
   }
 

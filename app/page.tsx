@@ -1,8 +1,7 @@
-import { Footer6 } from "@/components/layout/Footer";
 import { Features } from "@/components/layout/home-page-components/features/features-display";
 import { Hero } from "@/components/layout/home-page-components/hero/Hero";
 import TestimonialSection from "@/components/layout/home-page-components/testimonials/testimonial-section";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

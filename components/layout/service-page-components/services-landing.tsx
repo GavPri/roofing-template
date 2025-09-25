@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 type ServiceProps = {
   title: string;
@@ -100,7 +101,7 @@ const Services15 = () => {
                   service.height
                 )} overflow-hidden p-0`}
               >
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
                   className="absolute inset-0 h-full w-full object-cover"

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import Image from "next/image";
 
 interface About3Props {
   title?: string;
@@ -101,7 +102,7 @@ const About3 = ({
           <p className="text-muted-foreground">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
-          <img
+          <Image
             src={mainImage.src}
             alt={mainImage.alt}
             className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
@@ -121,7 +122,7 @@ const About3 = ({
                 </a>
               </Button>
             </div>
-            <img
+            <Image
               src={secondaryImage.src}
               alt={secondaryImage.alt}
               className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
@@ -136,7 +137,7 @@ const About3 = ({
                 className="flex items-center gap-3"
                 key={company.src + idx}
               >
-                <img
+                <Image
                   src={company.src}
                   alt={company.alt}
                   className="h-6 w-auto md:h-8 brightness-0 saturate-100 filter"

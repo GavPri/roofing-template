@@ -1,4 +1,4 @@
-import { Building, ChevronRight, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import React from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +9,7 @@ const contactMethods = [
     icon: Mail,
     title: "Email",
     description:
-      "Have a question or need help? Drop us an email, and we'll respond within 24 hours.",
+      "Have a question or need help? Drop us an email, and we&aposll respond within 24 hours.",
     contact: "hello@relative.io",
   },
   {
@@ -37,7 +37,7 @@ const ContactUs = () => {
             Get in Touch
           </h2>
           <p className="max-w-[600px] tracking-[-0.32px] text-muted-foreground">
-            We're here to help—reach out with any questions or feedback.
+            We are here to help—reach out with any questions or feedback.
           </p>
         </div>
 
