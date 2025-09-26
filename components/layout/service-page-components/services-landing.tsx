@@ -102,6 +102,7 @@ const Services15 = () => {
                 )} overflow-hidden p-0`}
               >
                 <Image
+                fill
                   src={service.image}
                   alt={service.title}
                   className="absolute inset-0 h-full w-full object-cover"
