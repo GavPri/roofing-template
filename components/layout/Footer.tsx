@@ -67,15 +67,7 @@ const Footer6 = () => {
           </div>
           <div className="border-border flex flex-col items-baseline justify-between gap-8 border-t pt-8 md:flex-row md:gap-16">
             <div className="text-muted-foreground text-xs sm:text-sm">
-              &copy; Shadcnblocks.com 2024
-            </div>
-            <div className="text-muted-foreground flex flex-col items-start gap-4 text-xs sm:text-sm md:flex-row lg:items-center">
-              <a href="#" className="hover:text-accent-foreground">
-                Terms & Conditions
-              </a>
-              <a href="#" className="hover:text-accent-foreground">
-                Privacy Policy
-              </a>
+              &copy; ToptierRoofing.com 2024
             </div>
           </div>
         </footer>
