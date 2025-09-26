@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
@@ -18,7 +17,7 @@ const sizeClasses = {
 
 export function Logo({ className, size = "md", href }: LogoProps) {
   const LogoContent = () => (
-    <Image
+    <img
       src="/roofing-template.svg"
       alt="Roofing Company Logo"
       className={cn(sizeClasses[size])}
