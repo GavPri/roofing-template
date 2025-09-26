@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -50,11 +51,12 @@ const Faq7 = () => {
               hitting the button below!
             </p>
             <Button
+              asChild
               size="lg"
               variant="default"
               className="w-fit hover:cursor-pointer"
             >
-              Contact Us
+              <Link href={"/contact"}>Contact Us</Link>
             </Button>
           </div>
           <Accordion type="single">

@@ -86,7 +86,7 @@ const About3 = ({
     description:
       "Providing homeowners with reliable solutions to protect their property, and maintain long-term value.",
     buttonText: "Contact Us",
-    buttonUrl: "https://shadcnblocks.com",
+    buttonUrl: "/contact",
   },
   companiesTitle = "Valued by clients worldwide",
   companies = defaultCompanies,
@@ -121,7 +121,7 @@ const About3 = ({
                 <p className="text-muted-foreground">{breakout.description}</p>
               </div>
               <Button variant="default" className="mr-auto" asChild>
-                <a href={breakout.buttonUrl} target="_blank">
+                <a href={breakout.buttonUrl}>
                   {breakout.buttonText}
                 </a>
               </Button>
