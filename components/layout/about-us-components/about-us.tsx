@@ -102,11 +102,15 @@ const About3 = ({
           <p className="text-muted-foreground">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
-          <Image
-            src={mainImage.src}
-            alt={mainImage.alt}
-            className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
-          />
+          {/* Main image - using fill with relative container */}
+          <div className="relative h-[400px] w-full max-h-[620px] rounded-xl lg:col-span-2 lg:h-[620px]">
+            <Image
+              src={mainImage.src}
+              alt={mainImage.alt}
+              fill
+              className="rounded-xl object-cover"
+            />
+          </div>
           <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
             <div className="flex flex-col justify-between gap-6 rounded-xl bg-muted p-7 md:w-1/2 lg:w-auto">
               <Logo size="lg" />
@@ -122,24 +126,30 @@ const About3 = ({
                 </a>
               </Button>
             </div>
-            <Image
-              src={secondaryImage.src}
-              alt={secondaryImage.alt}
-              className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
-            />
+            {/* Secondary image - using fill with relative container */}
+            <div className="relative h-[250px] grow rounded-xl md:h-[200px] md:w-1/2 lg:h-auto lg:min-h-[200px] lg:w-auto">
+              <Image
+                src={secondaryImage.src}
+                alt={secondaryImage.alt}
+                fill
+                className="rounded-xl object-cover"
+              />
+            </div>
           </div>
         </div>
         <div className="py-32">
-          <p className="text-center text-2xl text-foreground">{companiesTitle} </p>
+          <p className="text-center text-2xl text-foreground">
+            {companiesTitle}{" "}
+          </p>
           <div className="mt-8 flex flex-wrap justify-center gap-8">
             {companies.map((company, idx) => (
-              <div
-                className="flex items-center gap-3"
-                key={company.src + idx}
-              >
+              <div className="flex items-center gap-3" key={company.src + idx}>
+                {/* Company logos - using explicit dimensions since they're small and consistent */}
                 <Image
                   src={company.src}
                   alt={company.alt}
+                  width={120}
+                  height={32}
                   className="h-6 w-auto md:h-8 brightness-0 saturate-100 filter"
                   style={{
                     filter:
