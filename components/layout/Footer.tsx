@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Logo } from "../ui/logo";
 
 const sitemap = [
@@ -5,21 +6,18 @@ const sitemap = [
     title: "Company",
     links: [
       {
-        title: "About Us",
-        href: "#",
+        title: "Home",
+        href: "/",
       },
       {
-        title: "Careers",
-        href: "#",
+        title: "About US",
+        href: "/about-us",
       },
       {
         title: "Contact",
-        href: "#",
+        href: "/contact",
       },
-      {
-        title: "Press",
-        href: "#",
-      },
+      { title: "Services", href: "/services" },
     ],
   },
 ];
@@ -33,9 +31,11 @@ const Footer6 = () => {
             <div className="max-w-96">
               <div className="mb-6 flex items-center gap-3">
                 <div className="border-border bg-accent flex size-12 items-center justify-center rounded-lg border p-2">
-                  <Logo size="lg"/>
+                  <Logo size="lg" />
                 </div>
-                <h3 className="text-xl font-bold text-primary">Top Tier Roofing</h3>
+                <h3 className="text-xl font-bold text-primary">
+                  Top Tier Roofing
+                </h3>
               </div>
               <p className="text-muted-foreground text-base font-medium">
                 Roofing made easy.
@@ -51,12 +51,12 @@ const Footer6 = () => {
                     <ul className="text-muted-foreground space-y-3 text-base font-medium">
                       {section.links.map((link) => (
                         <li key={link.title}>
-                          <a
+                          <Link
                             href={link.href}
                             className="hover:text-accent-foreground whitespace-nowrap text-base"
                           >
                             {link.title}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
