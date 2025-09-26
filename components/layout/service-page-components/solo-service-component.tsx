@@ -33,10 +33,10 @@ const ServiceHero = ({
   description,
   buttons,
   images,
-  altText = "Service showcase"
+  altText = "Service showcase",
 }: ServiceHeroProps) => {
   return (
-    <section className="py-32 mx-auto max-w-6xl">
+    <section className="min-h-screen flex justify-center items-center mx-4 lg:mx-auto max-w-6xl my-32 lg:my-12">
       <div className="container">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="mx-auto">
@@ -54,13 +54,13 @@ const ServiceHero = ({
               <Button size="lg" className="w-full gap-2 sm:w-auto">
                 {buttons.primary}
               </Button>
-              <Button asChild
+              <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="w-full gap-2 sm:w-auto"
               >
-                <Link href={'/services'}>{buttons.secondary}</Link>
-                
+                <Link href={"/services"}>{buttons.secondary}</Link>
               </Button>
             </div>
           </div>
@@ -78,11 +78,11 @@ const ServiceHero = ({
             >
               <CarouselContent className="max-h-[350px]">
                 {images.map((image, index) => (
-                  <CarouselItem key={index} className="max-w-96">
-                    <Image
-                      src={image}
-                      alt={`${altText} ${index + 1}`}
-                    />
+                  <CarouselItem
+                    key={index}
+                    className="relative max-w-96 aspect-square"
+                  >
+                    <Image src={image} alt={`${altText} ${index + 1}`} fill />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -101,11 +101,11 @@ const ServiceHero = ({
             >
               <CarouselContent className="max-h-[350px]">
                 {images.map((image, index) => (
-                  <CarouselItem key={index} className="max-w-96">
-                    <Image
-                      src={image}
-                      alt={`${altText} ${index + 1}`}
-                    />
+                  <CarouselItem
+                    key={index}
+                    className=" max-w-96 "
+                  >
+                    <img src={image} alt={`${altText} ${index + 1}`} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -125,11 +125,11 @@ const ServiceHero = ({
             >
               <CarouselContent className="max-h-[600px]">
                 {images.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <Image
-                      src={image}
-                      alt={`${altText} ${index + 1}`}
-                    />
+                  <CarouselItem
+                    key={index}
+                    className="max-w-96"
+                  >
+                    <img src={image} alt={`${altText} ${index + 1}`} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -148,11 +148,11 @@ const ServiceHero = ({
             >
               <CarouselContent className="max-h-[600px]">
                 {images.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <Image
-                      src={image}
-                      alt={`${altText} ${index + 1}`}
-                    />
+                  <CarouselItem
+                    key={index}
+                    className="max-w-96 "
+                  >
+                    <img src={image} alt={`${altText} ${index + 1}`} />
                   </CarouselItem>
                 ))}
               </CarouselContent>

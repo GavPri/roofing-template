@@ -37,7 +37,7 @@ const faqs = [
 
 const Faq7 = () => {
   return (
-    <section className="mt-10 bg-background">
+    <section className=" my-36 mt-10 bg-background">
       <div className="container">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <div className="flex flex-col gap-6">
