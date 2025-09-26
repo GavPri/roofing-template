@@ -49,6 +49,7 @@ const Features = () => {
             <div className="absolute inset-0 bg-linear-to-t from-background to-transparent to-30%" />
             <div className="absolute inset-0 bg-linear-to-l from-background to-transparent to-30%" />
             <Image
+            fill
               src="/roofing-template-two.png"
               alt="placeholder"
               className="max-h-[500px] w-full rounded-2xl border border-border object-cover lg:max-h-none"

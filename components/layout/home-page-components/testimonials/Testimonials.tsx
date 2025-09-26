@@ -8,11 +8,14 @@ const Testimonial4 = () => {
       <div className="container">
         <div className="flex flex-col gap-6">
           <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
-            <Image
-              src="/roofing-template-one.png"
-              alt="placeholder"
-              className="h-72 w-full rounded-md object-cover lg:h-auto"
-            />
+            <div className="relative h-72 w-full rounded-md lg:h-auto">
+              <Image
+                src="/roofing-template-one.png"
+                alt="placeholder"
+                fill
+                className="rounded-md object-cover"
+              />
+            </div>
             <Card className="col-span-2 flex items-center justify-center p-6">
               <div className="flex flex-col gap-4">
                 <q className="text-xl font-medium lg:text-3xl">
